@@ -9,4 +9,15 @@ ex: rails generate model User email:string
 
 -in rails, the way we tell our app about what it can do it through routes
 config routes.rb
-domain specific language 
+domain specific language
+
+-MVC:
+Model:database - active record
+Controller: web requests - actioncontroller
+View: HTML - actionview
+
+-rails generate controller
+
+- the way we get access to the data we submitted in a form is through
+the params object THE PARAMS OBJECT!
+ex: params[:email] returns user email 
