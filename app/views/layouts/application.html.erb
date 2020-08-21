@@ -18,9 +18,12 @@
         <%= link_to_unless_current "New Pair", new_pair_path %>
       </section>
 
-<!-- if there is data in the session, spit out this persons email address--> 
+<!-- if there is data in the session, spit out this persons email address
+
+
+-->
       <section class="utility">
-        <% if session[:current_user_id] %>
+        <% if session[:current_user_id] %> <!--is the user logged in -->
         You are logged in as: <%= @current_user.email %> | <a href="/logout">Logout</a>
         <% else %>
         <%= link_to_unless_current "Login", login_path %> |

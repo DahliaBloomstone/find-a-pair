@@ -20,4 +20,7 @@ View: HTML - actionview
 
 - the way we get access to the data we submitted in a form is through
 the params object THE PARAMS OBJECT!
-ex: params[:email] returns user email 
+ex: params[:email] returns user email
+
+- Ruby = classes 
+Rails - MVC framework
