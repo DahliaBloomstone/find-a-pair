@@ -10,24 +10,25 @@
   </head>
 
   <body>
-    
+
     <nav>
       <section>
-        <%= link_to_unless_current "Home", root_path %> | 
+        <%= link_to_unless_current "Home", root_path %> |
         <%= link_to_unless_current "Open Pairs", pairs_path %> |
         <%= link_to_unless_current "New Pair", new_pair_path %>
-      </section> 
+      </section>
 
+<!-- if there is data in the session, spit out this persons email address--> 
       <section class="utility">
         <% if session[:current_user_id] %>
         You are logged in as: <%= @current_user.email %> | <a href="/logout">Logout</a>
         <% else %>
-        <%= link_to_unless_current "Login", login_path %> | 
-        <%= link_to_unless_current "Register", register_path %> 
+        <%= link_to_unless_current "Login", login_path %> |
+        <%= link_to_unless_current "Register", register_path %>
         <% end %>
       </section>
     </nav>
-    
+
     <%= yield %>
   </body>
 </html>

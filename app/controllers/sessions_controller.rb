@@ -21,9 +21,9 @@ end
 
 
 
-#ex: 
+#ex:
 # def home
 # @magic = "Surpise!"
-# end 
+# end
 # that instance variable (@magic) would be rendered in the view as "Surprise!"
 # as long as in application home.html.erb view had <%= @magic %> 
