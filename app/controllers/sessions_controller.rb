@@ -18,3 +18,12 @@ class SessionsController < ApplicationController
     redirect_to "/"
   end
 end
+
+
+
+#ex: 
+# def home
+# @magic = "Surpise!"
+# end 
+# that instance variable (@magic) would be rendered in the view as "Surprise!"
+# as long as in application home.html.erb view had <%= @magic %> 
