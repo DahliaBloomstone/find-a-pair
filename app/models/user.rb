@@ -2,6 +2,13 @@ class User < ApplicationRecord
   has_many :pair_requests, :class_name => "Pair", :foreign_key => "requestor_user_id"
   has_many :pair_responses, :class_name => "Pair", :foreign_key => "respondor_user_id"
 
+#multiple associatons between 2 models
+#two aliases
+#aliases: class name is pair, foreign key =users pairs
+# advanced associations
+# a user can have many pairs
+
+
   has_secure_password
 
 end

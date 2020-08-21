@@ -12,9 +12,10 @@ post '/users', to: 'users#create'
 #sessions controller:
 get '/login', to: 'sessions#new'
 post '/sessions', to: 'sessions#create'
-get '/logout', to: 'sessions#destroy' 
+get '/logout', to: 'sessions#destroy'
 
-  resources :pairs
+
+resources :pairs
 
   root 'application#home'
 end
