@@ -1,5 +1,6 @@
 class Pair < ApplicationRecord
-  # Alias Associations
+  # Alias Associations VVV
+  #
   belongs_to :requestor_user, :class_name => "User"
   belongs_to :respondor_user, :class_name => "User", :optional => true
   validates :title, :length => {in: 10..100}
@@ -11,7 +12,7 @@ class Pair < ApplicationRecord
       where(:respondor_user => nil)
     when :accepted
       where.not(:respondor_user => nil)
-    end    
+    end
   end
 
 
