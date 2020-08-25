@@ -7,7 +7,7 @@ look at source
 edit pair form
 id, action, and method is post
 patch request so the route of the update action can be called
-form builder object f.submit 
+form builder object f.submit
 
  -->
 <h1><%= @pair.topic %></h1>
@@ -16,6 +16,11 @@ form builder object f.submit
 <% if @pair.accepted? %>
   <h3>Accepted by: <%= @pair.respondor_user.email %></h3>
 <% else %>
+
+<!--
+
+-->
+
   <%= form_for(@pair) do |f| %>
     <% if @pair.errors[:respondor_user].any? %>
     <p>You can't pair with yourself...<a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">or can you...</a></p>

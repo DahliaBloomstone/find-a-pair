@@ -1,6 +1,6 @@
 class Pair < ApplicationRecord
   # Alias Associations VVV
-  # 
+  #
   belongs_to :requestor_user, :class_name => "User"
   belongs_to :respondor_user, :class_name => "User", :optional => true
 
@@ -8,6 +8,9 @@ class Pair < ApplicationRecord
   validates :title, :length => {in: 10..100}
   validates :description, :presence => true
 
+#self = pair
+#active record where method
+# Pair.by_status()
   def self.by_status(status)
     case status
     when :open
@@ -17,7 +20,7 @@ class Pair < ApplicationRecord
     end
   end
 
-
+#self = @pair = pair
   def accepted_by(user)
     if user == self.requestor_user
       self.errors.add(:respondor_user, "Blah")
@@ -27,6 +30,7 @@ class Pair < ApplicationRecord
     end
   end
 
+#force method to become a boolean, return true or nil not a user object
   def accepted?
     true if respondor_user
   end
