@@ -14,7 +14,7 @@ get '/login', to: 'sessions#new'
 post '/sessions', to: 'sessions#create'
 get '/logout', to: 'sessions#destroy'
 
-
+#route helper that generates the restful routes for a resource (index show edit new create udpdate delete)
 resources :pairs
 
   root 'application#home'

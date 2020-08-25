@@ -1,3 +1,15 @@
+
+<!--
+use form_for helper
+form_for(@pair)
+
+look at source
+edit pair form
+id, action, and method is post
+patch request so the route of the update action can be called
+form builder object f.submit 
+
+ -->
 <h1><%= @pair.topic %></h1>
 <h2>Requested by: <%= @pair.requestor_user.email %></h2>
 

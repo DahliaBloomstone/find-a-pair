@@ -8,8 +8,10 @@ class PairsController < ApplicationController
     @pairs = Pair.by_status(:open)
   end
 
+#find the pair the person wants based on the URL
+#render a show view 
   def show
-    @pair = Pair.find(params[:id])  
+    @pair = Pair.find(params[:id])
   end
 
   def update
@@ -19,13 +21,13 @@ class PairsController < ApplicationController
     else
       render :show
     end
-  end 
+  end
 
   def create
     @pair = Pair.new
     @pair.title = params["title"]
     @pair.description = params["description"]
-    @pair.requestor_user_id = current_user.id 
+    @pair.requestor_user_id = current_user.id
 
     if @pair.save
       redirect_to "/pairs"
