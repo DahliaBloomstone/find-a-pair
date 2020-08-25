@@ -11,6 +11,7 @@ class Pair < ApplicationRecord
 #self = pair
 #active record where method
 # Pair.by_status()
+# ACTIVE RECORD RUBY RAILS SCOPES 
   def self.by_status(status)
     case status
     when :open
