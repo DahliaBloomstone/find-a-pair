@@ -12,7 +12,7 @@ module ApplicationHelper
       end
     end
 
-    def login(user)
+    def login(user) #takes in a user object and puts the session for the current user id, how we log them in 
       session[:current_user_id] = @user.id
     end
   end

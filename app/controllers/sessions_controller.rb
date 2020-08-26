@@ -4,11 +4,11 @@ class SessionsController < ApplicationController
   def new
   end
 
-#logging in a user /creates a new session 
+#logging in a user /creates a new session
   def create #creates a session
     @user = User.find_by(:email => params[:email]) #finds user by email and password
     if @user && @user.authenticate(params[:password]) #if user is found
-      login(@user) #logs the user in
+      login(@user) #logs the user in, use login method in helpers 
       redirect_to "/" #redirects to home page
     else #if not
       redirect_to "/login", :notice => "Can't find that email." #redirect with message
